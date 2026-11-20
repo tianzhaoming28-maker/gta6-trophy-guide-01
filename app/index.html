@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Legend — GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-text">
+    <p class="kicker">Grand Theft Auto VI · PlayStation 5 · Offline guide</p>
+    <h1>Leonida Legend</h1>
+    <p class="sub">All 55 trophies with their official PlayStation names, descriptions and grades — plus a cited guide for every one, a platinum roadmap and the missables flagged. Works fully offline; progress never leaves this browser.</p>
+  </div>
+  <div class="hero-progress">
+    <div class="ring-label"><span id="pct">0%</span><small>to platinum</small></div>
+    <div class="bar"><div id="barfill"></div></div>
+    <p id="progress">0 of 55 earned · 0 points</p>
+    <p id="gradebreak" class="gradebreak"></p>
+  </div>
+</header>
+
+<nav class="views" aria-label="Views">
+  <button type="button" data-view="checklist" class="viewbtn active">Checklist</button>
+  <button type="button" data-view="roadmap" class="viewbtn">Roadmap to Platinum</button>
+  <button type="button" data-view="missables" class="viewbtn">Missables</button>
+</nav>
+
+<section id="view-checklist">
+  <div class="controls">
+    <div class="chips" role="group" aria-label="Filter by kind">
+      <button type="button" class="chip active" data-kind="all">All 55</button>
+      <button type="button" class="chip" data-kind="story">Story</button>
+      <button type="button" class="chip" data-kind="missable">Missable</button>
+      <button type="button" class="chip" data-kind="collectibles">Collectibles</button>
+      <button type="button" class="chip" data-kind="activities">Activities</button>
+      <button type="button" class="chip" data-kind="online">Online</button>
+    </div>
+    <label class="ctl">Grade
+      <select id="grade"><option value="all">All grades</option><option value="platinum">Platinum</option><option value="gold">Gold</option><option value="silver">Silver</option><option value="bronze">Bronze</option></select>
+    </label>
+    <label class="ctl grow">Search <input id="search" type="search" placeholder="trophy, mission, character…"></label>
+    <label class="ctl check"><input id="hideearned" type="checkbox"> Hide earned</label>
+    <label class="ctl check spoiler"><input id="spoiler" type="checkbox"> Spoiler mode — hide story trophies until earned</label>
+    <button id="export" type="button">Export progress</button>
+    <label class="importbtn">Import progress <input id="import" type="file" accept="application/json"></label>
+    <button id="reset" type="button" class="ghost">Reset</button>
+  </div>
+  <p id="showing" class="note"></p>
+  <p id="online-note" class="note" hidden>GTA VI has <strong>no online trophies</strong> at launch — all 55 are single-player (PowerPyx roadmap). This filter is here so the tracker stays complete if a future list adds any.</p>
+  <div class="layout">
+    <ol id="cards" class="cards"></ol>
+    <aside id="detail" class="detail" aria-live="polite">
+      <p class="detail-empty">Select a trophy to read its full guide, steps and sources.</p>
+    </aside>
+  </div>
+</section>
+
+<section id="view-roadmap" hidden>
+  <h2>Roadmap to the Platinum</h2>
+  <p class="note">Built from the official descriptions and the PowerPyx roadmap: difficulty 4/10, roughly 200 hours, one playthrough, free roam after the story but <strong>no mission replay</strong> — keep a manual save at the start of every chapter.</p>
+  <ol id="stages" class="stages"></ol>
+</section>
+
+<section id="view-missables" hidden>
+  <h2>Missable trophies</h2>
+  <p class="note">Judged strictly from the official descriptions plus the cited roadmap: only one trophy can be permanently lost. Everything else stays available in post-story free roam.</p>
+  <div id="missable-list"></div>
+</section>
+
+<footer>
+  <p>Trophy names, descriptions and grades are the official PlayStation list as published via Exophase. Guides are original text written for this app; each one names its sources beside it. No Rockstar Games artwork or logos are used. Fan-made, unofficial.</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
